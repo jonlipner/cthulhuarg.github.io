@@ -1,0 +1,49 @@
+header {
+	height:99; 
+	width:1920;
+	background-color: blue;
+}
+
+.logo {
+	
+}
+
+.nav {
+	
+}
+
+.slider {
+	height:720; 
+	width:1920;
+	background-color: yellow;
+}
+
+.intro {
+	height:406; 
+	width:1920;
+	background-color: violet;
+}
+
+.servicios {
+	height:720; 
+	width:1920;
+	background-color: green;
+}
+
+.cuadricula {
+	height:917; 
+	width:1920;
+	background-color: orange;
+}
+
+.data {
+	height:315; 
+	width:1920;
+	background-color: black;
+}
+
+footer {
+	height:471; 
+	width:1920;
+	background-color: red;
+}
