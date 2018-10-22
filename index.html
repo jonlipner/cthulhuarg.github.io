@@ -5,33 +5,127 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<style type="text/css">
-		
+		main {
+			background-color: #fbf9f1;
+		}
+
+		p {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700; 
+		}
+
+		#logoCon {
+			width: 20%;
+			height: auto;
+			margin: 0 auto;
+			padding-top: 15%;
+		}
+
+		#hojitas {
+			transition: all 1.5s ease;
+			transition-delay: 1.2s;
+		}
+
+		#hojitas img {
+			height: auto;
+		    width: 135px;
+		    position: absolute;
+		    transition: all 1s ease;
+		}
+
+		.winter {
+			opacity: 0;
+		}
+
+		.spring {
+			opacity: 1;
+		}
+
+		#arbolito img {
+			height: auto;
+		    width: 100px;
+		    position: absolute;
+		    padding-top: 41px;
+		    padding-left: 13px;
+		    transition: all 1s ease;
+		}
+
+		#cortina {
+			width: 135px;
+		    position: absolute;
+		    background-color: #fbf9f1;
+		    transition: all 2s ease;
+		}
+
+		.closed {
+			height: 188px;		    
+		}
+
+		.opened {
+			height: 0px;
+		}
+
+		#loguito {
+		    transition: all 1.5s ease;
+		    transition-delay: 2.2s;
+		}
+
+		#loguito img {
+			height: auto;
+		    width: 250px;
+		    position: absolute;
+		    padding-top: 124px;
+		    padding-left: 92px;
+		    transition: all 2s ease;
+		    transition-delay: 0.5s;
+		}
+
+		#enConst {
+			padding-top: 200px;
+    		width: 300px;
+		    text-align: center;
+		    transition: all 1.5s ease;
+		    transition-delay: 2.5s;
+		}
+
 	</style>
 	<title>Anahí Navarro Psicología</title>
 </head>
 <body>
 	<main>
 		<div id="logoCon">
+			<div id="hojitas" class="winter">
+				<img src="img/hojitas.png">
+			</div>
 			<div id="arbolito">
 				<img src="img/arbolito.png">
 			</div>
-			<div id="hojitas">
-				<img src="img/hojitas.png">
-			</div>
-			<div id="cortina">
+			<div id="cortina" class="closed">
 				
 			</div>
-			<div id="loguito">
+			<div id="loguito" class="winter">
 				<img src="img/loguito.png">
 			</div>
-			<div id="enConst">
+			<div id="enConst" class="winter">
 				<p>Sitio en construcción</p>
 			</div>
 		</div>
 	</main>
 	<script>
 		$(document).ready(function(){
+			setTimeout(function(){
+				$('#cortina').removeClass('closed');
+				$('#cortina').addClass('opened');
 
+				$('#hojitas').removeClass('winter');
+				$('#hojitas').addClass('spring');
+
+				$('#loguito').removeClass('winter');
+				$('#loguito').addClass('spring');
+
+				$('#enConst').removeClass('winter');
+				$('#enConst').addClass('spring');
+			},1000)
 		})
 	</script>
 </body>
