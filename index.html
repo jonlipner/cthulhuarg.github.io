@@ -5,42 +5,42 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<style type="text/css">
+		
+		*{
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+		
 		main {
 			background-color: #fbf9f1;
 		}
-
 		p {
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700; 
 		}
-
 		#logoCon {
 			width: 20%;
 			height: auto;
 			margin: 0 auto;
 			padding-top: 15%;
 		}
-
 		#hojitas {
 			transition: all 1.5s ease;
 			transition-delay: 1.2s;
 		}
-
 		#hojitas img {
 			height: auto;
 		    width: 135px;
 		    position: absolute;
 		    transition: all 1s ease;
 		}
-
 		.winter {
 			opacity: 0;
 		}
-
 		.spring {
 			opacity: 1;
 		}
-
 		#arbolito img {
 			height: auto;
 		    width: 100px;
@@ -49,27 +49,22 @@
 		    padding-left: 13px;
 		    transition: all 1s ease;
 		}
-
 		#cortina {
 			width: 135px;
 		    position: absolute;
 		    background-color: #fbf9f1;
 		    transition: all 2s ease;
 		}
-
 		.closed {
 			height: 188px;		    
 		}
-
 		.opened {
 			height: 0px;
 		}
-
 		#loguito {
 		    transition: all 1.5s ease;
 		    transition-delay: 2.2s;
 		}
-
 		#loguito img {
 			height: auto;
 		    width: 250px;
@@ -79,7 +74,6 @@
 		    transition: all 2s ease;
 		    transition-delay: 0.5s;
 		}
-
 		#enConst {
 			padding-top: 200px;
     		width: 300px;
@@ -89,7 +83,7 @@
 		}
 		
 		.corner-ribbon{
-		  width: 200px;
+		  width: 345px;
 		  background: #e43;
 		  position: absolute;
 		  top: 25px;
@@ -101,70 +95,30 @@
 		  transform: rotate(-45deg);
 		  -webkit-transform: rotate(-45deg);
 		}
-
 		/* Custom styles */
-
 		.corner-ribbon.sticky{
 		  position: fixed;
 		}
-
 		.corner-ribbon.shadow{
 		  box-shadow: 0 0 3px rgba(0,0,0,.3);
 		}
-
 		/* Different positions */
-
-		.corner-ribbon.top-left{
-		  top: 25px;
-		  left: -50px;
-		  transform: rotate(-45deg);
-		  -webkit-transform: rotate(-45deg);
-		}
-
 		.corner-ribbon.top-right{
-		  top: 25px;
-		  right: -50px;
-		  left: auto;
-		  transform: rotate(45deg);
-		  -webkit-transform: rotate(45deg);
+		  top: 60px;
+    		  right: -88px;
+    		  left: auto;
+    		  transform: rotate(45deg);
+    		  -webkit-transform: rotate(45deg);
 		}
-
-		.corner-ribbon.bottom-left{
-		  top: auto;
-		  bottom: 25px;
-		  left: -50px;
-		  transform: rotate(45deg);
-		  -webkit-transform: rotate(45deg);
-	}
-
-	.corner-ribbon.bottom-right{
-  		top: auto;
- 		right: -50px;
-  		bottom: 25px;
-  		left: auto;
-  		transform: rotate(-45deg);
-  		-webkit-transform: rotate(-45deg);
-	}
-
+		
 	/* Colors */
-
-	.corner-ribbon.white{background: #f0f0f0; color: #555;}
-	.corner-ribbon.black{background: #333;}
-	.corner-ribbon.grey{background: #999;}
-	.corner-ribbon.blue{background: #39d;}
-	.corner-ribbon.green{background: #2c7;}
-	.corner-ribbon.turquoise{background: #1b9;}
-	.corner-ribbon.purple{background: #95b;}
-	.corner-ribbon.red{background: #e43;}
-	.corner-ribbon.orange{background: #e82;}
-	.corner-ribbon.yellow{background: #ec0;}
-
+	.corner-ribbon.green{background: #95b36b;}
 	</style>
 	<title>Anahí Navarro Psicología</title>
 </head>
 <body>
 	<main>
-		<div class="corner-ribbon top-right sticky green shadow">Sitio en construcción</div>
+		<div class="corner-ribbon top-right sticky green shadow">SITIO EN CONSTRUCCIÓN</div>
 		<div id="logoCon">
 			<p>Al otro lado de los límites autoimpuestos, una parte de mí que todavía no conozco aguarda a que la descubra para poder completarme</p>
 		
@@ -190,13 +144,10 @@
 			setTimeout(function(){
 				$('#cortina').removeClass('closed');
 				$('#cortina').addClass('opened');
-
 				$('#hojitas').removeClass('winter');
 				$('#hojitas').addClass('spring');
-
 				$('#loguito').removeClass('winter');
 				$('#loguito').addClass('spring');
-
 				$('#enConst').removeClass('winter');
 				$('#enConst').addClass('spring');
 			},1000)
